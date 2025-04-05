@@ -6,7 +6,7 @@ __pycache__/
 *.py[cod]
 
 # Ignore collected static files
-staticfiles/
+# staticfiles/
 
 # Ignore local database
 db.sqlite3
