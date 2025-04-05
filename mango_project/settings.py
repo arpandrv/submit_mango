@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-)e)u6l@sz=*p5%(x#w!e3km6=yy-syhqsw$p9s0c5k6!)4+==-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['submit-mango.onrender.com']
+
 
 
 # Application definition
