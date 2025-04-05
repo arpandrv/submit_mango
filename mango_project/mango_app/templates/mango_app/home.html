@@ -1,0 +1,175 @@
+{% extends 'mango_app/base.html' %}
+{% load static %}
+
+{% block title %}Mango Surveillance{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Background -->
+<div class="card mb-4 bg-dark text-white">
+    <img src="{% static 'mango_app/images/mango_hero.jpg' %}" class="card-img opacity-50" alt="Mango orchard" style="height: 300px; object-fit: cover;">
+    <div class="card-img-overlay d-flex flex-column justify-content-center">
+        <div class="container">
+            <h1 class="card-title display-4">Mango Pest and Disease Surveillance</h1>
+            <p class="card-text lead">Protecting Australian mango orchards through effective monitoring and early detection</p>
+            <a href="{% url 'mango_app:projects' %}" class="btn btn-success btn-lg mt-3">Explore Pests & Diseases</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Two-column Layout for Introduction -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <!-- Introduction Card -->
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2>Welcome to the Surveillance Portal</h2>
+                    <p>This resource provides information about common pests and diseases affecting mango cultivation in Australia, along with recommended surveillance methods for early detection and management.</p>
+                    <p>Australian agriculture contributes significantly to the country's exports, but millions of dollars are lost each year due to pests and plant diseases. Robust surveillance practices are essential for preventing and managing potentially catastrophic outbreaks.</p>
+                    <hr>
+                    <h3>Use this portal to:</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Learn about common mango pests and their identification</li>
+                                <li>Understand prevalent mango diseases and their symptoms</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Explore effective surveillance methods</li>
+                                <li>Implement best practices for orchard monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <!-- Surveillance Calendar Section -->
+            <div class="card h-100">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0">Surveillance Calendar</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Critical Monitoring Periods:</h4>
+                    
+                    <div class="calendar-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                        <div>Pre-flowering (June-July)</div>
+                        <div class="risk-tag medium-risk">Medium Risk</div>
+                    </div>
+                    
+                    <div class="calendar-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                        <div>Flowering (August-September)</div>
+                        <div class="risk-tag high-risk">High Risk</div>
+                    </div>
+                    
+                    <div class="calendar-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                        <div>Fruit Development (October-November)</div>
+                        <div class="risk-tag high-risk">High Risk</div>
+                    </div>
+                    
+                    <div class="calendar-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                        <div>Harvest (December-February)</div>
+                        <div class="risk-tag medium-risk">Medium Risk</div>
+                    </div>
+                    
+                    <div class="calendar-item d-flex justify-content-between align-items-center p-2">
+                        <div>Post-harvest (March-May)</div>
+                        <div class="risk-tag low-risk">Low Risk</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Features Section with Improved Cards -->
+    <h2 class="mb-3 text-center">Key Resources</h2>
+    <div class="row g-4 mb-4">
+        <!-- Mango Pests Card -->
+        <div class="col-md-4">
+            <div class="card text-center h-100 shadow-sm">
+                <div class="bg-light p-4">
+                    <img src="{% static 'mango_app/images/mango_pest_preview.jpg' %}" class="card-img-top rounded-circle" alt="Mango Pest" style="width: 150px; height: 150px; object-fit: cover; margin: 0 auto;">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title">Mango Pests</h3>
+                    <p class="card-text flex-grow-1">Identify common pests affecting mango cultivation in Australia.</p>
+                    <a href="{% url 'mango_app:projects' %}#pest-filter" class="btn btn-outline-custom mt-auto pest-filter-link">Learn About Pests</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mango Diseases Card -->
+        <div class="col-md-4">
+            <div class="card text-center h-100 shadow-sm">
+                <div class="bg-light p-4">
+                    <img src="{% static 'mango_app/images/mango_disease_preview.jpg' %}" class="card-img-top rounded-circle" alt="Mango Diseases" style="width: 150px; height: 150px; object-fit: cover; margin: 0 auto;">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title">Mango Diseases</h3>
+                    <p class="card-text flex-grow-1">Recognize symptoms of common diseases affecting mango trees.</p>
+                    <a href="{% url 'mango_app:projects' %}#disease-filter" class="btn btn-outline-custom mt-auto disease-filter-link">Learn About Diseases</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Surveillance Methods Card -->
+        <div class="col-md-4">
+            <div class="card text-center h-100 shadow-sm">
+                <div class="bg-light p-4">
+                    <img src="{% static 'mango_app/images/surveillance_preview.jpg' %}" class="card-img-top rounded-circle" alt="Surveillance Methods" style="width: 150px; height: 150px; object-fit: cover; margin: 0 auto;">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title">Surveillance Methods</h3>
+                    <p class="card-text flex-grow-1">Discover effective methods for monitoring your mango orchard.</p>
+                    <a href="{% url 'mango_app:surveillance' %}" class="btn btn-outline-custom mt-auto">Learn About Surveillance</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Did You Know Section with Stats -->
+    <div class="card bg-light mb-4">
+        <div class="card-body">
+            <h3 class="mb-3 text-center">Did You Know?</h3>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 bg-transparent">
+                        <div class="card-body">
+                            <h1 class="display-4 text-success">70,000+</h1>
+                            <p>Tonnes of mangoes produced annually in Australia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 bg-transparent">
+                        <div class="card-body">
+                            <h1 class="display-4 text-success">$200M+</h1>
+                            <p>Farm gate value of Australia's mango industry</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 bg-transparent">
+                        <div class="card-body">
+                            <h1 class="display-4 text-success">80%</h1>
+                            <p>Of crop losses can be prevented with early detection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project Info Card -->
+    <div class="card mt-2 mb-4 bg-success text-white">
+        <div class="card-body text-center">
+            <h3>About the Project</h3>
+            <p>This website is part of a project to help Australian mango growers implement effective pest and disease surveillance. Explore the site to learn more about common mango pests and diseases, and best practices for monitoring your orchard.</p>
+            <a href="{% url 'mango_app:about' %}" class="btn btn-light">Learn more about the project</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

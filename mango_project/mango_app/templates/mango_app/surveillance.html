@@ -1,0 +1,195 @@
+{% extends 'mango_app/base.html' %}
+{% load static %}
+
+{% block title %}Mango Surveillance Methods - Mango Surveillance{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Mango Surveillance Methods</h1>
+
+<!-- Introduction Card -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h2>Mango Surveillance Methods</h2>
+        <p>Effective surveillance is crucial for early detection of pests and diseases in mango orchards. This page outlines recommended surveillance methods for Australian mango growers.</p>
+        <p>Regular monitoring helps identify problems before they become severe, reducing the need for extensive management interventions and minimizing economic losses.</p>
+    </div>
+</div>
+
+<!-- Why Surveillance Matters Section -->
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h2 class="mb-0">Why Surveillance Matters</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Benefits of Regular Surveillance:</h3>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item">Early detection of pests and diseases</li>
+                    <li class="list-group-item">Reduced chemical interventions through targeted treatments</li>
+                    <li class="list-group-item">Better crop quality and yield</li>
+                    <li class="list-group-item">Compliance with biosecurity requirements</li>
+                    <li class="list-group-item">Evidence for pest-free status for market access</li>
+                </ul>
+                <p>Without adequate surveillance, pests and diseases can establish and spread rapidly, leading to significant economic losses and potentially long-term management challenges.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'mango_app/images/surveillance_importance.jpg' %}" class="img-fluid rounded" alt="Mango grower inspecting trees">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Surveillance Methods Cards -->
+<h2 class="mb-3">Surveillance Methods</h2>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+    <!-- Visual Inspection -->
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Visual Inspection</h3>
+            </div>
+            <div class="card-body">
+                <p>Regular visual examination of trees for signs of pests and diseases.</p>
+                
+                <h4>Best For:</h4>
+                <ul>
+                    <li>General monitoring</li>
+                    <li>Early detection</li>
+                </ul>
+                
+                <h4>Recommended Frequency:</h4>
+                <p>Weekly during critical growth stages, monthly otherwise.</p>
+                
+                <h4>Procedure:</h4>
+                <p>Systematically check leaves, branches, flowers, and fruits for abnormalities.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trapping -->
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Trapping</h3>
+            </div>
+            <div class="card-body">
+                <p>Using various traps to monitor and detect pest presence.</p>
+                
+                <h4>Best For:</h4>
+                <ul>
+                    <li>Flying insects</li>
+                    <li>Population monitoring</li>
+                </ul>
+                
+                <h4>Recommended Frequency:</h4>
+                <p>Check traps weekly, replace as needed.</p>
+                
+                <h4>Procedure:</h4>
+                <p>Place pheromone traps, sticky traps, or light traps at strategic locations in the orchard.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sampling -->
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Sampling</h3>
+            </div>
+            <div class="card-body">
+                <p>Collection of plant material for closer examination or laboratory testing.</p>
+                
+                <h4>Best For:</h4>
+                <ul>
+                    <li>Disease confirmation</li>
+                    <li>Detailed analysis</li>
+                </ul>
+                
+                <h4>Recommended Frequency:</h4>
+                <p>As needed, especially when symptoms are observed.</p>
+                
+                <h4>Procedure:</h4>
+                <p>Collect affected plant parts in sealed bags and send to a diagnostic laboratory.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Systematic Monitoring -->
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Systematic Monitoring</h3>
+            </div>
+            <div class="card-body">
+                <p>Following a structured schedule and methodology for surveillance.</p>
+                
+                <h4>Best For:</h4>
+                <ul>
+                    <li>Comprehensive coverage</li>
+                    <li>Regulatory compliance</li>
+                </ul>
+                
+                <h4>Recommended Frequency:</h4>
+                <p>According to established protocols, typically monthly.</p>
+                
+                <h4>Procedure:</h4>
+                <p>Divide orchard into monitoring zones, record observations using standardized forms.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Monitoring Record Sheet Example -->
+<div class="card">
+    <div class="card-header bg-light">
+        <h2 class="mb-0">Sample Monitoring Record Sheet</h2>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Field</th>
+                        <th>Information to Record</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Date</td>
+                        <td>Date of surveillance activity</td>
+                    </tr>
+                    <tr>
+                        <td>Block/Zone</td>
+                        <td>Specific area monitored</td>
+                    </tr>
+                    <tr>
+                        <td>Trees Inspected</td>
+                        <td>Number and identification of trees checked</td>
+                    </tr>
+                    <tr>
+                        <td>Plant Parts Checked</td>
+                        <td>Leaves, branches, flowers, fruits, trunk</td>
+                    </tr>
+                    <tr>
+                        <td>Observations</td>
+                        <td>Symptoms, pests seen, severity, distribution</td>
+                    </tr>
+                    <tr>
+                        <td>Weather</td>
+                        <td>Temperature, humidity, rainfall, wind</td>
+                    </tr>
+                    <tr>
+                        <td>Actions Taken</td>
+                        <td>Samples collected, treatments applied</td>
+                    </tr>
+                    <tr>
+                        <td>Inspector</td>
+                        <td>Name of person conducting surveillance</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

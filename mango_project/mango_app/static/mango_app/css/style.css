@@ -1,0 +1,106 @@
+/* Custom styles for Mango Surveillance project */
+
+/* Navbar custom color */
+.navbar-custom {
+    background-color: #2e7d32; /* Dark green color */
+}
+
+/* Custom button styles */
+.btn-outline-custom {
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.btn-outline-custom:hover {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.btn-custom {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #1b5e20;
+    color: white;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #a5d6a7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Scientific name styling */
+.scientific-name {
+    font-style: italic;
+    color: #666;
+}
+
+/* Card hover effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Card headers */
+.card-header.bg-success {
+    background-color: #2e7d32 !important;
+}
+
+/* Table styles */
+.table-hover tbody tr:hover {
+    background-color: rgba(46, 125, 50, 0.1);
+}
+
+
+/* Surveillance Calendar Styles */
+.calendar-item {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.calendar-item:hover {
+    background-color: rgba(46, 125, 50, 0.1);
+}
+
+.risk-tag {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 100px;
+}
+
+.high-risk {
+    background-color: #f44336;
+    color: white;
+}
+
+.medium-risk {
+    background-color: #ff9800;
+    color: white;
+}
+
+.low-risk {
+    background-color: #4caf50;
+    color: white;
+}
