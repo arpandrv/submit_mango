@@ -12,8 +12,34 @@ class ProjectListView(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['mango_items'] = mango_items
+        
+        # Get filter type from request or default to 'all'
+        filter_type = self.request.GET.get('filter', 'all')
+        
+        # Apply filter if needed
+        if filter_type == 'all':
+            context['mango_items'] = mango_items
+        elif filter_type == 'pest':
+            context['mango_items'] = [item for item in mango_items if item.item_type == 'pest']
+        elif filter_type == 'disease':
+            context['mango_items'] = [item for item in mango_items if item.item_type == 'disease']
+        else:
+            context['mango_items'] = mango_items
+            
+        # Pass the current filter to the template
+        context['current_filter'] = filter_type
         return context
+        
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        
+        # Check if this is an HTMX request
+        if request.headers.get('HX-Request'):
+            # For HTMX requests, only return the filtered items partial
+            return render(request, 'mango_app/partials/item_grid.html', context)
+        
+        # For normal requests, return the full page
+        return render(request, self.template_name, context)
 
 class MangoItemDetailView(View):
     template_name = 'mango_app/detail.html'

@@ -34,7 +34,7 @@
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">Mango Pests</h3>
                         <p class="card-text flex-grow-1">Identify common pests affecting mango cultivation in Australia.</p>
-                        <a href="{% url 'mango_app:projects' %}#pest-filter" class="btn btn-outline-custom mt-auto pest-filter-link">Learn About Pests</a>
+                        <a href="{% url 'mango_app:projects' %}?filter=pest" class="btn btn-outline-custom mt-auto">Learn About Pests</a>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">Mango Diseases</h3>
                         <p class="card-text flex-grow-1">Recognize symptoms of common diseases affecting mango trees.</p>
-                        <a href="{% url 'mango_app:projects' %}#disease-filter" class="btn btn-outline-custom mt-auto disease-filter-link">Learn About Diseases</a>
+                        <a href="{% url 'mango_app:projects' %}?filter=disease" class="btn btn-outline-custom mt-auto">Learn About Diseases</a>
                     </div>
                 </div>
             </div>
