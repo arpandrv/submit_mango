@@ -89,33 +89,4 @@
     </div>
 </div>
 
-<!-- Simple JavaScript for filtering -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('[data-filter]');
-    const itemCards = document.querySelectorAll('.item-card');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Get filter value
-            const filterValue = this.getAttribute('data-filter');
-            
-            // Show/hide cards based on filter value
-            itemCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-type') === filterValue) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-});
-</script>
 {% endblock %}

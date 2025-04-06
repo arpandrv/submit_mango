@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: django-static-site
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn submit_mango.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: mango_project.settings

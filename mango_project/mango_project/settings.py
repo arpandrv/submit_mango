@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-)e)u6l@sz=*p5%(x#w!e3km6=yy-syhqsw$p9s0c5k6!)4+==-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['submit-mango.onrender.com', '127.0.0.1']
+
 
 
 # Application definition
@@ -123,9 +124,19 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Where my custom static files are during development [ default]
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS is commented out because this project does not have a 
+# top-level 'static' directory. App-specific static files are found 
+# automatically within each app's 'static' subdirectory (e.g., mango_app/static/)
+# due to 'APP_DIRS': True in the TEMPLATES setting. Keeping the original line
+# caused a W004 warning as os.path.join(BASE_DIR, 'static') did not exist.
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
+
+
+STATICFILES_DIRS = []
+
 
 # Where Django will collect static files (for WhiteNoise to serve)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
